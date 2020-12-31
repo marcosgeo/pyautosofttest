@@ -5,7 +5,7 @@ from flask_restful import Api
 
 from stores.resources.item import Item, ItemList
 
-app = Falsk(__name__)
+app = Flask(__name__)
 
 app.config["DEBUG"] = True
 
