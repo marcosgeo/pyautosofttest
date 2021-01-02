@@ -22,7 +22,6 @@ class BaseTest(TestCase):
         self.app = app.test_client()
         self.app_context = app.app_context
 
-
     def tearDown(self):
         # Database is blank
         with app.app_context():
