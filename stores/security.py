@@ -23,4 +23,4 @@ def identity(payload):
     :return: A UserModel object
     """
     user_id = payload["identity"]
-    return UserModel.find_ny_id(user_id)
+    return UserModel.find_by_id(user_id)
