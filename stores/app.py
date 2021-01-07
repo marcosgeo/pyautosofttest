@@ -4,10 +4,10 @@ from flask import Flask, jsonify
 from flask_restful import Api
 from flask_jwt import JWT, JWTError
 
-from stores.security import authenticate, identity
-from stores.resources.item import Item, ItemList
-from stores.resources.store import Store, StoreList
-from stores.resources.user import UserRegister
+from security import authenticate, identity
+from resources.item import Item, ItemList
+from resources.store import Store, StoreList
+from resources.user import UserRegister
 
 app = Flask(__name__)
 
@@ -35,7 +35,7 @@ def auth_error(err):
 
 
 if __name__ == "__main__":
-    from stores.db import db
+    from db import db
 
     db.init_app(app)
 
